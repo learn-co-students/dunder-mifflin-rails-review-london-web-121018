@@ -1,4 +1,4 @@
-class CreateEmployees < ActiveRecord::Migration[5.1]
+class CreateEmployees < ActiveRecord::Migration[5.1]psche
   def change
     create_table :employees do |t|
       t.string :first_name
@@ -7,6 +7,7 @@ class CreateEmployees < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :office
       t.string :img_url
+      t.integer :dog
 
       t.timestamps
     end
