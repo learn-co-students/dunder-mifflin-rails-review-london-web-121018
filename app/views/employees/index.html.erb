@@ -1,0 +1,12 @@
+<h1>All the employees</h1>
+
+
+
+<% @employees.each do |employee| %>
+<% @full_name = employee.first_name + " " + employee.last_name %>
+<%= link_to @full_name, employee %><br>
+
+<% end %>
+
+<br>
+<%= link_to "Add an employee", new_employee_path %>
