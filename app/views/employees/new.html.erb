@@ -1,0 +1,41 @@
+<h1>Add an employee</h1>
+
+<%= form_for [@dog, @employee] do |f| %>
+  <div class="field">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  </div>
+  <br>
+  <div class="field">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  </div>
+  <br>
+  <div class="field">
+  <%= f.label :alias %>
+  <%= f.text_field :alias %>
+  </div>
+  <br>
+  <div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </div>
+  <br>
+  <div class="field">
+  <%= f.label :office %>
+  <%= f.text_field :office %>
+  </div>
+  <br>
+  <p>Dog: <%= f.collection_select :dog_id, Dog.all, :id, :name %></p>
+  </div>
+  <br>
+  <div class="actions">
+  <%= f.submit %>
+  </div>
+<% end %>
+
+<br>
+<%= link_to "All employees", employees_path %><br>
+<br>
+<%= link_to "All dogs", dogs_path %>
+<br>
